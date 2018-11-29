@@ -19,7 +19,8 @@ const phrases = [
 "winner",
 "love is all",
 "amazing time",
-"hi again"];
+"hi again"
+];
 
 
 
