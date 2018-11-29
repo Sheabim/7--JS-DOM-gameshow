@@ -89,17 +89,11 @@ function checkWin(){
 
 
 ////////////////////restart the page
-// function reStart() {
-//   location.reload();
-// };
-
-
 function reStart() {
+  location.reload();
+};
 
-    setTimeout(function () {
-        location.reload()
-    }, 100);
-}
+
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
 
