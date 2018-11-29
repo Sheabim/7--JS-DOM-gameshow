@@ -95,6 +95,7 @@ function reStart() {
 
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
+
 const letters = document.querySelectorAll('.letter');
 
 
@@ -123,7 +124,7 @@ overlay.addEventListener('click', (e) => {
       const button = e.target;
       if(button.innerHTML === "Start Game"){
         overlay.style.visibility="hidden";
-      } else if(button.innerHTML === "Again?"){
+      } else if(button.innerHTML === "TRY AGAIN?"){
         reStart();
        }
 
