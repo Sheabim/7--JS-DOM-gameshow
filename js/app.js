@@ -15,11 +15,11 @@ const title = document.querySelector('.title');
 
 //////////////////phrases array with 5 strings, letters and spaces only, no punctuation or special characters
 const phrases = [
-"hello there",
-"winner",
-"love is all",
-"amazing time",
-"hi again"
+  "hello there",
+  "winner",
+  "love is all",
+  "amazing time",
+  "hi again"
 ];
 
 
@@ -34,10 +34,10 @@ function getRandomPhraseAsArray(array) {
 ///////////////////////////////function to select random phrase and add to the gameboard, then add classes of "letter" or "space"
 function addPhraseToDisplay(arr) {
   //const ul = phrase.firstElementChild;
-  const ul = document.getElementById('phrase')
-  for(let i = 0; i < arr.length; i+=1) {
-    let li = document.createElement('li');
-    li.textContent = arr[i];
+    const ul = document.getElementById('phrase')
+      for(let i = 0; i < arr.length; i+=1) {
+      let li = document.createElement('li');
+       li.textContent = arr[i];
       if(arr[i] === ' ') {
         li.classList.add("space");
       } else {
@@ -72,7 +72,7 @@ function checkWin(){
     h2.textContent = "Won";
     overlay.appendChild(h2);
     const startAgain = overlay.querySelector('a');
-    startButton.innerHTML="TRY AGAIN?";
+    startAgain .innerHTML="TRY AGAIN?";
     overlay.insertBefore(h2, startAgain);
     overlay.style.visibility="visible";
 
@@ -82,7 +82,7 @@ function checkWin(){
     h2.textContent = "Lost";
     overlay.appendChild(h2);
     const startAgain = overlay.querySelector('a');
-    startButton.innerHTML="TRY AGAIN?";
+    startAgain.innerHTML="TRY AGAIN?";
     overlay.style.visibility="visible";
   }
 }
@@ -95,8 +95,7 @@ function reStart() {
 
 
 const phraseArray = getRandomPhraseAsArray(phrases);
-addPhraseToDisplay(phraseArray);
-
+  addPhraseToDisplay(phraseArray);
 const letters = document.querySelectorAll('.letter');
 
 
@@ -106,10 +105,10 @@ qwerty.addEventListener('click', (e) => {
   if (e.target.tagName == "BUTTON") {
     const button = e.target;
     button.classList.add("chosen");
-    let letterFound = checkLetter(button);
-    if (letterFound !== null) {
+     let letterFound = checkLetter(button);
+      if (letterFound !== null) {
     ////////////////////////////////////attribute you can set called “disabled” that when set to true
-      button.disabled = true;
+    button.disabled = true;
     } else {
     const imgs = tries[missed].firstElementChild;
     imgs.setAttribute("src", "images/lostHeart.png");
@@ -122,12 +121,11 @@ qwerty.addEventListener('click', (e) => {
 ///////////////////////////////// Attach a event listener to the “Start Game” button to hide the start screen overlay.
 overlay.addEventListener('click', (e) => {
   if (e.target.className === 'btn__reset') {
-      const button = e.target;
+  const button = e.target;
       if(button.innerHTML === "Start Game"){
         overlay.style.visibility="hidden";
       } else if(button.innerHTML === "TRY AGAIN?"){
         reStart();
        }
-
-    }
+     }
 });
