@@ -16,7 +16,7 @@ const title = document.querySelector('.title');
 //////////////////phrases array with 5 strings, letters and spaces only, no punctuation or special characters
 const phrases = [
   "hello there",
-  "winner",
+  "winner is cool",
   "love is all",
   "amazing time",
   "hi again"
@@ -69,7 +69,7 @@ function checkWin(){
   if(letters.length === shown.length) {
     overlay.classList.replace('start', 'win');
     const h2 = document.createElement('h2');
-    h2.textContent = "Won";
+    h2.textContent = "Win";
     overlay.appendChild(h2);
     const startAgain = overlay.querySelector('a');
     startAgain .innerHTML="TRY AGAIN?";
@@ -79,7 +79,7 @@ function checkWin(){
   } else if (missed === 5 ) {
     overlay.classList.replace('start', 'lose');
     const h2 = document.createElement('h2');
-    h2.textContent = "Lost";
+    h2.textContent = "Lose";
     overlay.appendChild(h2);
     const startAgain = overlay.querySelector('a');
     startAgain.innerHTML="TRY AGAIN?";
