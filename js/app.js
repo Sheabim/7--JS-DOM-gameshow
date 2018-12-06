@@ -21,9 +21,6 @@ const phrases = [
   "amazing time",
   "hi again"
 ];
-
-
-
 ///////////////////////////This function should randomly choose a phrase from the phrases array and split
 function getRandomPhraseAsArray(array) {
   let random = array[Math.floor(Math.random()*array.length)];
@@ -65,6 +62,7 @@ const letters = document.querySelectorAll('.letter');
 
 // //checks if the game is won, lost or keep playing
 function checkWin(){
+const letters = document.querySelectorAll('.letter')
   const shown= document.querySelectorAll('.show');
   if(letters.length === shown.length) {
     overlay.classList.replace('start', 'win');
